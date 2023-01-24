@@ -31,7 +31,10 @@ plt.ylabel('Water Level')
 # Using the Superior Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+superior = pd.read_csv("sup.csv")
+plt.plot(superior['year'], superior['lake levels'])
+plt.xlabel("Year")
+plt.ylabel("Lake Superior Water Level")
 
 # PART 3
 # Using the Erie Dataset, plot the Water Level, the second column, 
