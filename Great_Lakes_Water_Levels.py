@@ -81,12 +81,13 @@ plt.ylabel("Superior Water Level")
 # any correlation between the water levels.
 erie = pd.read_csv("eri.csv")
 huron = pd.read_csv("mhu.csv")
-plt.plot(erie['time'], erie['water level'], label = 'Erie')
-plt.plot(huron['time'], huron['lake average'], label = 'Huron')
+#plt.plot(erie['time'], erie['water level'], label = 'Erie')
+#plt.plot(huron['time'], huron['lake average'], label = 'Huron')
+plt.plot(erie['water leve'], huron['lake average'])
 plt.legend()
 plt.grid()
-plt.xlabel("Year")
-plt.ylabel("Lake Water Level")
+plt.xlabel("Erie Water Level")
+plt.ylabel("Huron Water Level")
 
 
 # PART 7
