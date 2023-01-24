@@ -12,9 +12,15 @@
 # is not big enough to finish all parts below, but if you have extra 
 # time, you're welcome to do so.
 # """"
+
+# import numpy as np
+# import pandas as pd
+# import matplotlib.pyplot as plt
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
 # -
 
 
@@ -40,7 +46,14 @@ plt.ylabel("Lake Superior Water Level")
 # Using the Erie Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
+# +
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
+erie = pd.read_csv('eri.csv')
+plt.plot(erie['time'],erie['water level'])
+# -
 
 # PART 4
 # Using the Ontario Dataset, plot the Water Level, the second column, 
