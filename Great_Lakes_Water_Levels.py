@@ -12,9 +12,15 @@
 # is not big enough to finish all parts below, but if you have extra 
 # time, you're welcome to do so.
 # """"
+
 # import numpy as np
 # import pandas as pd
 # import matplotlib.pyplot as plt
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
 # -
 
 
@@ -22,13 +28,19 @@
 # Using the Michigan/Huron Dataset, plot the Water Level, the second 
 # column, as a function of time years
 
-
+mhu = pd.read_csv('mhu.csv')
+plt.plot(mhu['time'], mhu['lake average'])
+plt.xlabel('Years')
+plt.ylabel('Water Level')
 
 # PART 2
 # Using the Superior Dataset, plot the Water Level, the second column, 
 # as a function of time years
 
-
+superior = pd.read_csv("sup.csv")
+plt.plot(superior['year'], superior['lake levels'])
+plt.xlabel("Year")
+plt.ylabel("Lake Superior Water Level")
 
 # PART 3
 # Using the Erie Dataset, plot the Water Level, the second column, 
@@ -54,13 +66,27 @@ plt.plot(erie['time'],erie['water level'])
 # Michigan/Hurion Water Level vs Superior Water Level to see if there 
 # is any correlation between the water levels.
 
+# +
+mhu= pd.read_csv('mhu.csv')
+sup= pd.read_csv('sup.csv')
 
+plt.plot(mhu["lake average"], sup["lake levels"])
+plt.xlabel("Michigan/Huron Water Level")
+plt.ylabel("Superior Water Level")
+# -
 
 # PART 6
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
-
+erie = pd.read_csv("eri.csv")
+huron = pd.read_csv("mhu.csv")
+plt.plot(erie['time'], erie['water level'], label = 'Erie')
+plt.plot(huron['time'], huron['lake average'], label = 'Huron')
+plt.legend()
+plt.grid()
+plt.xlabel("Year")
+plt.ylabel("Lake Water Level")
 
 
 # PART 7
