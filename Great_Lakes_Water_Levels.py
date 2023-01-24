@@ -55,7 +55,7 @@ import matplotlib.pyplot as plt
 
 
 # PART 7
-#Using the Superior and Ontario Datasets, plot the Superior Water 
+# Using the Superior and Ontario Datasets, plot the Superior Water 
 # Level vs Ontario Water Level to see if there is any correlation 
 # between the water levels.
 
