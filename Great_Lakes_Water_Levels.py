@@ -56,15 +56,14 @@ plt.ylabel("Lake Superior Water Level")
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
-erie_date, erie_level = np.loadtxt("eri.csv", usecols = [0,1], unpack=True, delimiter=',')
-huron_date, huron_level = np.loadtxt("mhu.csv", usecols = [0,1], unpack=True, delimiter=',')
-plt.plot(erie_date, erie_level, label = 'Erie')
-plt.plot(huron_date, huron_level, label = 'Huron')
+erie = pd.read_csv("eri.csv")
+huron = pd.read_csv("mhu.csv")
+plt.plot(erie['time'], erie['water level'], label = 'Erie')
+plt.plot(huron['time'], huron['lake average'], label = 'Huron')
 plt.legend()
 plt.grid()
-plt.title('Water Level over Time')
-plt.xlabel('Date')
-plt.ylabel('Water level')
+plt.xlabel("Year")
+plt.ylabel("Lake Water Level")
 
 
 # PART 7
