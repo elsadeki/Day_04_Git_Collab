@@ -51,7 +51,15 @@ import matplotlib.pyplot as plt
 # Using the Michigan/Hurion and Erie Datasets, plot the 
 # Michigan/Huron Water Level vs Erie Water Level to see if there is 
 # any correlation between the water levels.
-
+erie_date, erie_level = np.loadtxt("eri.csv", usecols = [0,1], unpack=True, delimiter=',')
+huron_date, huron_level = np.loadtxt("mhu.csv", usecols = [0,1], unpack=True, delimiter=',')
+plt.plot(erie_date, erie_level, label = 'Erie')
+plt.plot(huron_date, huron_level, label = 'Huron')
+plt.legend()
+plt.grid()
+plt.title('Water Level over Time')
+plt.xlabel('Date')
+plt.ylabel('Water level')
 
 
 # PART 7
